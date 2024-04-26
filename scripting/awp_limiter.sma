@@ -617,7 +617,7 @@ TakeAwpsFromTeam(TeamName:iTeam) {
     get_players_ex(iPlayers, iPlayersNum, iGetPlayersFlags);
     SortIntegers(iPlayers, sizeof iPlayers, Sort_Random);
 
-    for (new i, id; i <= MAX_PLAYERS; i++) {
+    for (new i, id; i < MAX_PLAYERS; i++) {
         id = iPlayers[i];
 
         if (!id) {
