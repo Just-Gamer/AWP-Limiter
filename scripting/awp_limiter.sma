@@ -108,7 +108,7 @@ public plugin_init() {
 
     /* <== DEBUG ==> */
 
-    g_bIsDebugActive = bool:(plugin_flags() & AMX_FLAG_DEBUG);
+    g_bIsDebugActive = !!(plugin_flags() & AMX_FLAG_DEBUG);
 
     if (g_bIsDebugActive) {
         new szLogsDir[MAX_RESOURCE_PATH_LENGTH];
